@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalpana's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f8f9fc;
+      color: #333;
+      text-align: center;
+    }
+
+    nav {
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .nav-links a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .logo {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-img {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #4b6cb7;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    p, li {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    ul {
+      list-style-position: inside;
+      padding: 0;
+    }
+
+    .cert-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    ul.links {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.links li {
+      margin: 10px 0;
+    }
+
+    ul.links li a {
+      color: #1e3c72;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    ul.links li a:hover {
+      color: #4b6cb7;
+    }
+
+    form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    form button {
+      background: #4b6cb7;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #324d9a;
+    }
+
+    .icon {
+      height: 20px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="vvit.jpg" alt="VVIT Logo" class="logo">
+    <div class="nav-links">
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('education')">Education</a>
+      <a href="#" onclick="showSection('certificates')">Certificates</a>
+      <a href="#" onclick="showSection('projects')">Projects</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <section id="home" class="active">
+      <img src="kalp.jpg" class="hero-img" alt="Profile Image">
+      <h2>STUDENT</h2>
+      <p>Hello! I'm <strong>Kalpana</strong>, a tech lover passionate about designing and building user-friendly projects. Explore my work and journey here!</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>School:</strong> Sri Sahajananda High School (2021)</li>
+        <li><strong>Intermediate:</strong> Vignan Girls Jr. College (2021–2023)</li>
+        <li><strong>B.Tech:</strong> Currently pursuing VVIT (2023–2027)</li>
+      </ul>
+      <h2>Skills</h2>
+      <ul>
+        <li>Python – Basic programming and scripting</li>
+        <li>Figma – UI/UX design and prototyping</li>
+        <li>HTML & CSS – Web development fundamentals</li>
+        <li>JavaScript – Basic interactivity and DOM manipulation</li>
+      </ul>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <p>I enjoy learning through hands-on courses and online platforms. These certificates reflect my interest and dedication to continuous learning.</p>
+      <div class="cert-card">
+        <p>A hardworking and curious learner, always striving to improve and achieve more through learning.</p>
+        <p>
+           <a href="https://github.com/kalpanasana/certificates" target="_blank">
+            <img src="github.jpg" class="icon" alt="GitHub"> View My Certificates on GitHub
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>I love building small but meaningful projects. These showcase my growing skills in programming and development.</p>
+      <ul class="links">
+        <li><a href="https://github.com/kalpanasana/My-Projects" target="_blank">🎮 Tic Tac Toe - Game</a></li>
+        <li><a href="https://github.com/kalpanasana/My-Projects" target="_blank">🧱 Brick Game - Python Project</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div>
+        <p><strong>Email:</strong> <a href="mailto:kalpanasana4@gmail.com">kalpanasana4@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+916302689393">+91-6302689393</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://in.linkedin.com/in/sana-kalpana-a13704330" target="_blank">linkedin.com/in/sana-kalpana</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/kalpanasana" target="_blank">github.com/kalpanasana</a></p>
+      </div>
+
+      <form onsubmit="submitMessage(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Mobile Number" required pattern="[0-9]{10}">
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+
+    function submitMessage(event) {
+      event.preventDefault();
+      alert("✅ Thank you for your message! I’ll get back to you soon.");
+event.target.reset();
+}
+</script>
+
+</body> </html>
